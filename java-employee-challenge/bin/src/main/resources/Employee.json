@@ -1,0 +1,125 @@
+{
+"status": "success",
+"data": [
+	{
+	"id": "1",
+	"employee_name": "Tiger Nixon",
+	"employee_salary": "320800",
+	"employee_age": "61",
+	"profile_image": ""
+	},
+	
+	{
+	"id": "2",
+	"employee_name": "Lisa Ray",
+	"employee_salary": "320000",
+	"employee_age": "30",
+	"profile_image": ""
+	},
+
+	{
+	"id": "3",
+	"employee_name": "Ritika",
+	"employee_salary": "200000",
+	"employee_age": "25",
+	"profile_image": ""
+	},
+
+	{
+	"id": "4",
+	"employee_name": "Neha Kale",
+	"employee_salary": "220800",
+	"employee_age": "32",
+	"profile_image": ""
+	},
+
+	{
+	"id": "5",
+	"employee_name": "Sherman Dixon",
+	"employee_salary": "320800",
+	"employee_age": "61",
+	"profile_image": ""
+	},
+
+	{
+	"id": "6",
+	"employee_name": "Amit Khatri",
+	"employee_salary": "450000",
+	"employee_age": "45",
+	"profile_image": ""
+	},
+
+	{
+	"id": "7",
+	"employee_name": "Kevin Fernandis",
+	"employee_salary": "500000",
+	"employee_age": "45",
+	"profile_image": ""
+	},
+
+	{
+	"id": "8",
+	"employee_name": "Larry Bowen",
+	"employee_salary": "360000",
+	"employee_age": "47",
+	"profile_image": ""
+	},
+
+	{
+	"id": "9",
+	"employee_name": "Madhu Sharma",
+	"employee_salary": "250000",
+	"employee_age": "25",
+	"profile_image": ""
+	},
+
+	{
+	"id": "10",
+	"employee_name": "Mary Bow",
+	"employee_salary": "470000",
+	"employee_age": "32",
+	"profile_image": ""
+	},
+
+	{
+	"id": "11",
+	"employee_name": "Nitish Kumar",
+	"employee_salary": "600000",
+	"employee_age": "58",
+	"profile_image": ""
+	},
+
+	{
+	"id": "12",
+	"employee_name": "Ajay Mehta",
+	"employee_salary": "453800",
+	"employee_age": "55",
+	"profile_image": ""
+	},
+
+	{
+	"id": "13",
+	"employee_name": "Ashish Chavan",
+	"employee_salary": "500000",
+	"employee_age": "44",
+	"profile_image": ""
+	},
+
+	{
+	"id": "14",
+	"employee_name": "Jijo George",
+	"employee_salary": "600000",
+	"employee_age": "55",
+	"profile_image": ""
+	},
+
+	{
+	"id": "15",
+	"employee_name": "Sagar Joshi",
+	"employee_salary": "220500",
+	"employee_age": "34",
+	"profile_image": ""
+	}
+	
+	]
+}
