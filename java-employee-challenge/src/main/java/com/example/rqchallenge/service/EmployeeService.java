@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException.TooManyRequests;
+import org.springframework.web.client.HttpServerErrorException.InternalServerError;
 
 import com.example.rqchallenge.dao.IEmployeeDAO;
 import com.example.rqchallenge.exception.EmployeeAPIException;
@@ -37,7 +38,7 @@ public class EmployeeService implements IEmployeeService {
 		} catch (TooManyRequests e) {
 			logger.info("Too many requests", e.getMessage(), e);
 			throw new EmployeeAPIException("Too many requests: " + HttpStatus.TOO_MANY_REQUESTS, HttpStatus.TOO_MANY_REQUESTS);
-		} catch (Exception e) {
+		} catch (InternalServerError e) {
 			logger.info("Could not fetch employees from data source", e.getMessage(), e);
 			throw new EmployeeAPIException("Could not fetch employees from data source due to " + HttpStatus.INTERNAL_SERVER_ERROR, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
@@ -55,7 +56,7 @@ public class EmployeeService implements IEmployeeService {
 		} catch (TooManyRequests e) {
 			logger.info("Too many requests", e.getMessage(), e);
 			throw new EmployeeAPIException("Too many requests: " + HttpStatus.TOO_MANY_REQUESTS, HttpStatus.TOO_MANY_REQUESTS);
-		} catch (Exception e) {
+		} catch (InternalServerError e) {
 			logger.info("Could not fetch employees from data source", e.getMessage(), e);
 			throw new EmployeeAPIException("Could not fetch employee details from data source due to " + HttpStatus.INTERNAL_SERVER_ERROR, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
@@ -95,7 +96,10 @@ public class EmployeeService implements IEmployeeService {
 				throw new EmployeeAPIException("Could not get employee by name " + name + " from data source ", HttpStatus.NOT_FOUND);
 			}
 			return employeeNames;
-		} catch (Exception e) {
+		} catch (TooManyRequests e) {
+			logger.info("Too many requests", e.getMessage(), e);
+			throw new EmployeeAPIException("Too many requests: " + HttpStatus.TOO_MANY_REQUESTS, HttpStatus.TOO_MANY_REQUESTS);
+		} catch (InternalServerError e) {
 			logger.info("Could not fetch employees from data source", e.getMessage(), e);
 			throw new EmployeeAPIException("Could not fetch employee details from data source due to " + HttpStatus.INTERNAL_SERVER_ERROR, HttpStatus.INTERNAL_SERVER_ERROR);
 		}

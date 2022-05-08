@@ -26,8 +26,6 @@ public class ServiceExceptionHandler extends ResponseEntityExceptionHandler {
     	EmployeeAPIException errorResponse = new EmployeeAPIException(ex);
         if(ex instanceof EmployeeAPIException) {
             errorResponse.setMessage(((EmployeeAPIException)ex).getMessage());
-        }
-        if(ex instanceof EmployeeAPIException) {
             return new ResponseEntity<Object>(ex.getMessage(),((EmployeeAPIException)ex).getStatus());
         } else {
             return new ResponseEntity<Object>(errorResponse,HttpStatus.INTERNAL_SERVER_ERROR);
